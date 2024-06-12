@@ -1,6 +1,5 @@
 // Parent Form data Fetch in Child table when we click on Fetch Value Button other data will be get flush//
 
-
 frappe.ui.form.on('Cloud Renewal', {
     refresh: function(frm) {
         frm.add_custom_button(__('Fetch Value'), function() {
@@ -24,9 +23,7 @@ frappe.ui.form.on('Cloud Renewal', {
             frm.set_value('payment_status',"");
             frm.set_value('sales_invoice_no',"");
             frm.set_value('sales_invoice_date',"");
-            frm.set_value('invoice_attachment',"");
-            
+            frm.set_value('invoice_attachment',"");   
         });
-            
     }
 });
