@@ -6,7 +6,6 @@ frappe.ui.form.on('Cloud Renewal', {
         frm.add_custom_button(__('Fetch Value'), function() {
             var parentValue = frm.doc.parent_input;
             var childTable = frm.fields_dict['sales_invoice_no'].grid;
-
             var row = frappe.model.add_child(cur_frm.doc, "Previous Plan Details", "plan_other_details");
             row.plan_opted = frm.doc.present_plan;
             row.plan_start_period = frm.doc.current_period_plan_date;
@@ -16,7 +15,6 @@ frappe.ui.form.on('Cloud Renewal', {
             row.sales_invoice_date = frm.doc.sales_invoice_date;
             row.sales_invoice_attachment = frm.doc.invoice_attachment;
             refresh_field("plan_other_details");
-
             // Code for Data Flush
             frm.refresh_fields();
             frm.set_value('plan_periodicity',"");
